@@ -30,8 +30,17 @@ public class LoginPage implements ActionListener {
         loginButton.setFocusable(false);
         resetButton.addActionListener(this);
 
+        JLabel titleLabel = new JLabel("Login Page");
+        titleLabel.setFont(new Font("Arial", Font.BOLD, 20));
+        titleLabel.setHorizontalAlignment(JLabel.CENTER);
+        titleLabel.setBounds(125, 30, 200, 30);
+        JLabel hintLabel = new JLabel("<html><div style='text-align: center;'>Note: Passwords are case-sensitive.</div></html>");
+        hintLabel.setFont(new Font(null, Font.PLAIN, 12));
+        hintLabel.setBorder(BorderFactory.createLineBorder(Color.GRAY, 1));
+        hintLabel.setHorizontalAlignment(JLabel.CENTER);
+        hintLabel.setBounds(50, 300, 300, 40);
 
-
+        frame.add(titleLabel);
         frame.add(userIDLabel);
         frame.add(userPasswordLabel);
         frame.add(messageLAbel);
@@ -39,6 +48,7 @@ public class LoginPage implements ActionListener {
         frame.add(userPasswordField);
         frame.add(loginButton);
         frame.add(resetButton);
+        frame.add(hintLabel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(420,420);
         frame.setLayout(null);
